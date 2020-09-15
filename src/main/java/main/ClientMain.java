@@ -35,5 +35,6 @@ public class ClientMain {
             System.out.println(p.toString());
             System.out.println(service.calculateFee(p));
         }
+        //CP
     }
 }
