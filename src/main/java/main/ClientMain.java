@@ -34,7 +34,6 @@ public class ClientMain {
         for (Parking p : service.listParking()) {
             System.out.println(p.toString());
             System.out.println(service.calculateFee(p));
-            System.out.println("Hola Mundo");
         }
     }
 }
