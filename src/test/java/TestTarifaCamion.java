@@ -31,7 +31,7 @@ public class TestTarifaCamion {
         System.out.println("Camion más de medio día");
         Parking parking = new Parking(1,VehicleEnum.CAMION,800); 
         int precio = new ParkingService().calculateParkingFee(parking);
-        assertEquals(11200, precio);
+        assertEquals(15000, precio);
         }
     
     @Test

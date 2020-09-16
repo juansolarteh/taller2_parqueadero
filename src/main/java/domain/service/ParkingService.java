@@ -16,13 +16,15 @@ import domain.access.Factory;
 public class ParkingService {
     
     public int calculateParkingFee(Parking parking) {
-
+        
+        int result = 0;
         if (parking == null) {
-            return 0;
+            return result;
         }
-        // La fábrica devuelve una instancia de la jerarquia IDelivery  
+ 
         CalculateFee fee = Factory.getInstance().getVehicle(parking.getTypeVehicle());
-        int result = fee.CalcularTarifa(parking.getParkingMinutes());
+        if (fee != null)
+            result = fee.CalcularTarifa(parking.getParkingMinutes());
 
         return result;
 

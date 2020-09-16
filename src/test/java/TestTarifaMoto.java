@@ -18,18 +18,10 @@ public class TestTarifaMoto {
         }
 
     @Test
-    public void testCarroMenosTiempo() throws ParseException {
+    public void testMotoMenosTiempo() throws ParseException {
         System.out.println("Moto menos de 60 minutos");
         Parking parking = new Parking(1,VehicleEnum.MOTO,10); 
         int precio = new ParkingService().calculateParkingFee(parking);
         assertEquals(1000, precio);
-        }
-    
-    @Test
-    public void testCarroNoRedondeo() throws ParseException {
-        System.out.println("Moto sin redondeo");
-        Parking parking = new Parking(1, VehicleEnum.MOTO,120); 
-        int precio = new ParkingService().calculateParkingFee(parking);
-        assertEquals(1500, precio);
         }
     }

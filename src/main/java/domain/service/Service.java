@@ -25,10 +25,12 @@ public class Service {
     public boolean saveParking(Parking newParking) {
 
         //Validate product
-        if (newParking == null || newParking.getParkingMinutes()<= 0 || newParking.getTypeVehicle() == null) {
+        if (newParking == null || newParking.getParkingMinutes()<= 0 || 
+                newParking.getTypeVehicle() == null || newParking.getParkingId() <= 0) {
             return false;
         }
-
+        if (repository == null)
+            return false;
         repository.save(newParking);
         return true;
 

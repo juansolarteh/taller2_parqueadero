@@ -31,14 +31,6 @@ public class TestTarifaCarro {
         int precio = new ParkingService().calculateParkingFee(parking);
         assertEquals(2000, precio);
         }
-    
-    @Test
-    public void testCarroNoRedondeo() throws ParseException {
-        System.out.println("Carro sin redondeo");
-        Parking parking = new Parking(1,VehicleEnum.CARRO,120); 
-        int precio = new ParkingService().calculateParkingFee(parking);
-        assertEquals(3000, precio);
-        }
     }
     
     
