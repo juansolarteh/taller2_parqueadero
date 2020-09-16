@@ -26,14 +26,14 @@ public class TestTarifaCamion {
         assertEquals(15000, precio);
         }
 
-    /*@Test
+    @Test
     public void testCamionMasDeMedioDia() throws ParseException {
         System.out.println("Camion más de medio día");
         Parking parking = new Parking(1,VehicleEnum.CAMION,800); 
         int precio = new ParkingService().calculateParkingFee(parking);
-        assertEquals(15000, precio);
+        assertEquals(11200, precio);
         }
-    */
+    
     @Test
     public void testCamionMedioDia() throws ParseException {
         System.out.println("Camion medio día");
